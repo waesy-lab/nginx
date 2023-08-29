@@ -4,7 +4,7 @@ ARG NGINX_VERSION=${NGINX_VERSION}
 FROM nginx:${NGINX_VERSION}-alpine
 
 # Copia o arquivo de configuração nginx.conf personalizado para o contêiner
-COPY nginx/nginx.conf /etc/nginx/
+COPY ./docker/nginx/nginx.conf /etc/nginx/
 
 # Atualiza e instala os pacotes necessários
 # certbot certbot-nginx são os responsáveis pela geração de HTTPS
