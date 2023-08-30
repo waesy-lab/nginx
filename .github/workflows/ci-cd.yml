@@ -9,8 +9,8 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
+            # - name: Checkout code
+            #   uses: actions/checkout@v2
 
             - name: Deploy using ssh
               uses: appleboy/ssh-action@master
@@ -20,5 +20,5 @@ jobs:
                 key: ${{ secrets.SSH_PRIVATE_KEY }}
                 port: 22
                 script: |
-                    cd /var/www/youtube.com/
+                    cd /home/waesy/www
                     git pull origin main
