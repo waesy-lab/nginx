@@ -20,5 +20,5 @@ jobs:
                 key: ${{ secrets.SSH_PRIVATE_KEY }}
                 port: 22
                 script: |
-                    cd /home/waesy/www
+                    cd /home/waesy/www/nginx
                     git pull origin main
