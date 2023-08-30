@@ -11,7 +11,7 @@ jobs:
         steps:
             # - name: Checkout code
             #   uses: actions/checkout@v2
-            
+
             - name: Deploy using ssh
               uses: appleboy/ssh-action@master
               with:
@@ -22,3 +22,4 @@ jobs:
                 script: |
                     cd /home/waesy/www/nginx
                     git pull origin main
+                    sh sh-up.sh
